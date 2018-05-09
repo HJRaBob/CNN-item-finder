@@ -51,16 +51,16 @@ class Capture_manager(QWidget):
 
     def start_capture(self, pressed):
         start_time = time.time()
-        self.start_btn.setDisabled(True)
-        self.start_btn.setText('wait')
-        for i in range(10):
+        # self.start_btn.setDisabled(True)
+        # self.start_btn.setText('wait')
+        for i in range(100):
             find_window()
             time.sleep(0.5)
-            if(i%10==0):
-                self.start_btn.setText('wait...{}%'.format(i))
-            if(i >=99):
-                self.start_btn.setText('Start')
-                self.start_btn.setEnabled(True)
+            # if(i%10==0):
+            #     self.start_btn.setText('wait...{}%'.format(i))
+            # if(i >=99):
+            #     self.start_btn.setText('Start')
+            #     self.start_btn.setEnabled(True)
 
 def main():
     find_window()
@@ -71,6 +71,7 @@ if __name__=='__main__':
     ex = Capture_manager()
     sys.exit(app.exec_())
 
+    ## load image
     # img = cv.imread('img/background/back_{}.png'.format(number))
     # plt.imshow(img)
     # plt.show()
